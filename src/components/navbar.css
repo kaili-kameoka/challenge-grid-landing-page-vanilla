@@ -99,33 +99,15 @@
   white-space: nowrap;
 }
 
-/* --- Overlay ------------------------------------------------------------ */
-
-/* Pins the scrim and panel to the same 1440px container the page uses, so
-   the panel's right edge lines up with the toggle instead of running out to
-   the viewport edge on wider screens. Stays a plain wrapper without JS, so
-   the panel keeps sitting in normal flow there. */
-.js .navbar__overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  max-width: 90rem;
-  margin-inline: auto;
-  pointer-events: none;
-}
-
-.js .navbar__overlay > * {
-  pointer-events: auto;
-}
-
 /* --- Scrim -------------------------------------------------------------- */
 
 /* Only ever shown by the JS-driven open state, so it stays hidden when the
    panel is simply sitting in the page unscripted. */
 .navbar__scrim {
   display: none;
-  position: absolute;
+  position: fixed;
   inset: 4.5rem 0 0;
+  z-index: 1;
   background-color: var(--color-neutral-950);
   opacity: 0.25;
 }
@@ -151,7 +133,7 @@
    the panel covers exactly the hero band, as in the design. */
 .js .navbar__panel--open {
   display: flex;
-  position: absolute;
+  position: fixed;
   inset-block-start: 4.5rem;
   inset-inline: 0;
   z-index: 2;

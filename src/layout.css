@@ -29,3 +29,9 @@
     grid-template-columns: minmax(0, 1fr) 49.5rem; /* 792px */
   }
 }
+
+/* Held on <body> while the menu overlay is open, so the page cannot scroll
+   out from under a fixed panel and an unfixed bar. */
+.is-scroll-locked {
+  overflow: hidden;
+}

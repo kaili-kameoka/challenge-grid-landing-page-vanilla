@@ -19,6 +19,8 @@
   /* 72px total with the border inside it, so page content starts at exactly
      72px as it does in the design. Centring a 24px row in that box is what
      the design's 24px block padding amounts to. */
+  position: relative;
+  z-index: 3;
   height: 4.5rem;
   padding-inline: var(--spacing-300);
   border-block-end: 1px solid var(--color-blue-400);
@@ -85,6 +87,23 @@
   white-space: nowrap;
 }
 
+/* --- Scrim -------------------------------------------------------------- */
+
+/* Only ever shown by the JS-driven open state, so it stays hidden when the
+   panel is simply sitting in the page unscripted. */
+.navbar__scrim {
+  display: none;
+  position: fixed;
+  inset: 4.5rem 0 0;
+  z-index: 1;
+  background-color: var(--color-neutral-950);
+  opacity: 0.25;
+}
+
+.navbar__scrim--open {
+  display: block;
+}
+
 /* --- Panel -------------------------------------------------------------- */
 
 .navbar__panel {
@@ -92,21 +111,40 @@
   background-color: var(--color-blue-700);
 }
 
-/* Without JS the panel simply stays open, so the links are always reachable. */
+/* Without JS the panel simply stays open in flow, so the links are always
+   reachable; it only becomes a collapsible overlay once scripting is on. */
 .js .navbar__panel {
   display: none;
 }
 
+/* Mobile: full width below the bar, 342px tall with the links centred --
+   the panel covers exactly the hero band, as in the design. */
 .js .navbar__panel--open {
-  display: block;
+  display: flex;
+  position: fixed;
+  inset-block-start: 4.5rem;
+  inset-inline: 0;
+  z-index: 2;
+  align-items: center;
+  min-height: 21.375rem; /* 342px */
+  max-height: calc(100svh - 4.5rem);
+  overflow-y: auto;
 }
 
-/* Tablet and up dock the panel to the right edge at a fixed 396px. */
+/* Tablet and up dock the panel to the right edge at a fixed 396px, running
+   from under the bar to the bottom of the viewport, over the footer. */
 @media (min-width: 48rem) {
   .navbar__panel {
     width: 24.75rem; /* 396px */
-    margin-inline-start: auto;
     padding: var(--spacing-600);
+  }
+
+  .js .navbar__panel--open {
+    inset-block-end: 0;
+    inset-inline-start: auto;
+    align-items: flex-start;
+    min-height: 0;
+    max-height: none;
   }
 }
 

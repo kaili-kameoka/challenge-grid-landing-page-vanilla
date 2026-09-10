@@ -1,4 +1,5 @@
 @import "./tokens.css";
+@import "./components/stat-card.css";
 
 *,
 *::before,
@@ -17,8 +18,6 @@ svg {
   max-width: 100%;
 }
 
-/* Temporary harness for previewing the stats component on its own. The real
-   Statistics Container from the design replaces this. */
 .stats-preview {
   display: grid;
 }

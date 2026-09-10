@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Design tokens
+   Source: Figma "grid-landing-page" > 🎨 Design System
+     - Style Guide - Color      (node 153:4244)
+     - Style Guide - Typography (node 153:4216)
+   ========================================================================== */
+
+:root {
+  /* --- Color: neutral ----------------------------------------------------- */
+  --color-neutral-0: #ffffff;
+  --color-neutral-900: #21214d;
+  --color-neutral-950: #000000;
+
+  /* --- Color: blue -------------------------------------------------------- */
+  --color-blue-200: #e4ebff;
+  --color-blue-400: #4784ff;
+  --color-blue-600: #325cff;
+  --color-blue-700: #2854fe;
+
+  /* --- Typography: family and weight -------------------------------------- */
+  --font-family-base:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* --- Typography: text presets ------------------------------------------- */
+  /* Preset 1 — 60px */
+  --text-preset-1-size: 3.75rem;
+  --text-preset-1-line-height: 1.06;
+  --text-preset-1-letter-spacing: -2px;
+
+  /* Preset 2 — 44px */
+  --text-preset-2-size: 2.75rem;
+  --text-preset-2-line-height: 1.06;
+  --text-preset-2-letter-spacing: -2px;
+
+  /* Preset 3 — 36px */
+  --text-preset-3-size: 2.25rem;
+  --text-preset-3-line-height: 1.11;
+  --text-preset-3-letter-spacing: 0;
+
+  /* Preset 4 — 32px */
+  --text-preset-4-size: 2rem;
+  --text-preset-4-line-height: 1.6;
+  --text-preset-4-letter-spacing: -2px;
+
+  /* Preset 5 — 17px, regular and medium share metrics */
+  --text-preset-5-size: 1.0625rem;
+  --text-preset-5-line-height: 1.65;
+  --text-preset-5-letter-spacing: 0;
+
+  /* Preset 6 — 14px, tracking differs between the two weights */
+  --text-preset-6-size: 0.875rem;
+  --text-preset-6-line-height: 1.42;
+  --text-preset-6-medium-letter-spacing: 0;
+  --text-preset-6-regular-letter-spacing: -0.25px;
+}

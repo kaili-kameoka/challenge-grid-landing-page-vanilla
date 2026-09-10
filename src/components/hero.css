@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Hero
+   Source: Figma "grid-landing-page" > ✨ Designs > Left Section Container
+   ========================================================================== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  /* 56px block / 32px inline on mobile. Figma authors these as raw values
+     rather than spacing variables, so they stay raw here too. */
+  padding: 3.5rem 2rem;
+  color: var(--color-neutral-0);
+  font-family: var(--font-family-base);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  width: 100%;
+}
+
+.hero__heading {
+  margin: 0;
+  font-size: var(--text-preset-2-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--text-preset-2-line-height);
+  letter-spacing: var(--text-preset-2-letter-spacing);
+}
+
+.hero__subheading {
+  margin: 0;
+  color: var(--color-blue-200);
+  font-size: var(--text-preset-5-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-preset-5-line-height);
+  letter-spacing: var(--text-preset-5-letter-spacing);
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    padding: var(--spacing-600);
+  }
+
+  .hero__content {
+    gap: 2.5rem; /* 40px */
+    /* The design's column is 397px, but the browser measures "for every
+       child." at 398.2px where Figma fits it, so the heading would wrap to
+       three lines. 400px restores the designed two-line break. */
+    max-width: 25rem; /* 400px, design 397px */
+  }
+
+  /* The one place the type scale steps: preset 2 on mobile, preset 1 above. */
+  .hero__heading {
+    font-size: var(--text-preset-1-size);
+    line-height: var(--text-preset-1-line-height);
+    letter-spacing: var(--text-preset-1-letter-spacing);
+  }
+}

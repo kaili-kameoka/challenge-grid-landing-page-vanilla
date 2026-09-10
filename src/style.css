@@ -1,6 +1,10 @@
 @import "./tokens.css";
+@import "./layout.css";
 @import "./components/navbar.css";
+@import "./components/hero.css";
+@import "./components/stats.css";
 @import "./components/stat-card.css";
+@import "./components/site-footer.css";
 
 *,
 *::before,
@@ -10,6 +14,7 @@
 
 body {
   margin: 0;
+  background-color: var(--color-blue-700);
 }
 
 img,
@@ -19,12 +24,3 @@ svg {
   max-width: 100%;
 }
 
-.stats-preview {
-  display: grid;
-}
-
-@media (min-width: 48rem) {
-  .stats-preview {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Statistics container
+   Source: Figma "grid-landing-page" > ✨ Designs > Statistics Container
+   ========================================================================== */
+
+.stats {
+  display: grid;
+  /* Equal rows, so the cards share any height the stats column is stretched
+     to on viewports taller than the design's 800px desktop frame. */
+  grid-auto-rows: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* On desktop the stats sit directly under the bar, so the top row's border
+   would double the bar's own bottom border into a 2px line over the stats
+   while the hero keeps 1px. Figma renders both strokes at half coverage, so
+   the design reads as a uniform 1px; dropping the redundant one matches it.
+   Below this width the hero sits between them and the border is load-bearing. */
+@media (min-width: 80rem) {
+  .stats > .stat-card:nth-child(-n + 2) {
+    border-block-start: 0;
+  }
+}

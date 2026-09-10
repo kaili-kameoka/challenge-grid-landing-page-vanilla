@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Page layout
+   Source: Figma "grid-landing-page" > ✨ Designs > Desktop/Tablet/Mobile Home
+   ========================================================================== */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  max-width: 90rem; /* 1440px */
+  margin-inline: auto;
+}
+
+/* Mobile and tablet stack the hero above the stats. The hero row takes any
+   slack left over once the stats and the 72px bars are placed, which is how
+   the design derives its 536px tablet hero rather than sizing it to content. */
+.page__main {
+  display: grid;
+  flex: 1;
+  grid-template-rows: 1fr auto;
+}
+
+/* The side-by-side layout needs room for the 397px hero column inside its
+   48px padding plus the fixed 792px stats block, so it waits until 1280px
+   rather than the 768px tablet step. The design only supplies 768 and 1440
+   frames; this is the narrowest width the desktop composition actually fits. */
+@media (min-width: 80rem) {
+  .page__main {
+    grid-template-columns: minmax(0, 1fr) 49.5rem; /* 792px */
+  }
+}

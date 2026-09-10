@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Site footer
+   Source: Figma "grid-landing-page" > ✨ Designs > Footer Container
+   ========================================================================== */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-300);
+  border-block-start: 1px solid var(--color-blue-400);
+  color: var(--color-neutral-0);
+  font-family: var(--font-family-base);
+}
+
+.site-footer__text {
+  margin: 0;
+  font-size: var(--text-preset-6-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--text-preset-6-line-height);
+  letter-spacing: var(--text-preset-6-medium-letter-spacing);
+}
+
+/* Tablet and up put the two lines on one 72px row, border inside as in the bar. */
+@media (min-width: 48rem) {
+  .site-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.5rem;
+    padding-block: 0;
+    padding-inline: var(--spacing-600);
+  }
+
+  .site-footer__text--end {
+    text-align: right;
+  }
+}

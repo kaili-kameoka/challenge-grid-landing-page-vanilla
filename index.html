@@ -12,122 +12,137 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <title>Grid Landing Page</title>
+    <title>Bridge Collective — A classroom for every child</title>
   </head>
   <body>
-    <div id="app">
-    <header class="navbar">
-      <div class="navbar__bar">
-        <a class="navbar__brand" href="/">
-          <span class="navbar__brand-mark" aria-hidden="true">●</span> Bridge Collective
-        </a>
-        <button
-          class="navbar__toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="navbar-menu"
-        >
-          <span class="navbar__toggle-text">Menu</span>
-          <img
-            class="navbar__toggle-icon navbar__toggle-icon--menu"
-            src="/icons/nav-menu.svg"
-            alt=""
-            width="24"
-            height="24"
-          />
-          <img
-            class="navbar__toggle-icon navbar__toggle-icon--close"
-            src="/icons/nav-close.svg"
-            alt=""
-            width="24"
-            height="24"
-          />
-        </button>
-      </div>
-      <nav class="navbar__panel" id="navbar-menu" aria-label="Main">
-        <ul class="navbar__list">
-          <li class="navbar__item"><a class="navbar__link" href="#about">About</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#our-work">Our Work</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#partners">Partners</a></li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#annual-report">Annual Report</a>
-          </li>
-          <li class="navbar__item"><a class="navbar__link" href="#donate">Donate</a></li>
-        </ul>
-      </nav>
-    </header>
-
-      <!-- Temporary harness for previewing the stats component on its own.
-           The real Statistics Container from the design replaces this. -->
-      <div class="stats-preview">
-        <article class="stat-card">
-          <div class="stat-card__header">
+    <div class="page">
+      <header class="navbar">
+        <div class="navbar__bar">
+          <a class="navbar__brand" href="/">
+            <span class="navbar__brand-mark" aria-hidden="true">●</span> Bridge Collective
+          </a>
+          <button
+            class="navbar__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navbar-menu"
+          >
+            <span class="navbar__toggle-text">Menu</span>
             <img
-              class="stat-card__icon"
-              src="/icons/stat-students.svg"
+              class="navbar__toggle-icon navbar__toggle-icon--menu"
+              src="/icons/nav-menu.svg"
               alt=""
-              width="32"
-              height="32"
+              width="24"
+              height="24"
             />
-            <p class="stat-card__value">2.4M</p>
-          </div>
-          <div class="stat-card__description">
-            <h2 class="stat-card__title">Students reached</h2>
-            <p class="stat-card__detail">Across 31 countries since 2011.</p>
-          </div>
-        </article>
-
-        <article class="stat-card">
-          <div class="stat-card__header">
             <img
-              class="stat-card__icon"
-              src="/icons/stat-schools.svg"
+              class="navbar__toggle-icon navbar__toggle-icon--close"
+              src="/icons/nav-close.svg"
               alt=""
-              width="32"
-              height="32"
+              width="24"
+              height="24"
             />
-            <p class="stat-card__value">1,284</p>
-          </div>
-          <div class="stat-card__description">
-            <h2 class="stat-card__title">Schools partnered</h2>
-            <p class="stat-card__detail">In 14 countries, from Kenya to Guatemala.</p>
-          </div>
-        </article>
+          </button>
+        </div>
+        <nav class="navbar__panel" id="navbar-menu" aria-label="Main">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a class="navbar__link" href="#about">About</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#our-work">Our Work</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#partners">Partners</a></li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#annual-report">Annual Report</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="#donate">Donate</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <article class="stat-card">
-          <div class="stat-card__header">
-            <img
-              class="stat-card__icon"
-              src="/icons/stat-teachers.svg"
-              alt=""
-              width="32"
-              height="32"
-            />
-            <p class="stat-card__value">38K</p>
+      <main class="page__main">
+        <section class="hero">
+          <div class="hero__content">
+            <h1 class="hero__heading">A classroom for every child.</h1>
+            <p class="hero__subheading">
+              We fund the schools, train the teachers, and measure what works — so every child
+              we reach today becomes a graduate tomorrow.
+            </p>
           </div>
-          <div class="stat-card__description">
-            <h2 class="stat-card__title">Teachers trained</h2>
-            <p class="stat-card__detail">Equipped with modern tools and methodology.</p>
-          </div>
-        </article>
+        </section>
 
-        <article class="stat-card">
-          <div class="stat-card__header">
-            <img
-              class="stat-card__icon"
-              src="/icons/stat-graduation.svg"
-              alt=""
-              width="32"
-              height="32"
-            />
-            <p class="stat-card__value">3.1×</p>
-          </div>
-          <div class="stat-card__description">
-            <h2 class="stat-card__title">Graduation lift</h2>
-            <p class="stat-card__detail">Partner schools outperform national averages 3x.</p>
-          </div>
-        </article>
-      </div>
+        <section class="stats" aria-label="Our impact">
+          <article class="stat-card">
+            <div class="stat-card__header">
+              <img
+                class="stat-card__icon"
+                src="/icons/stat-students.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <p class="stat-card__value">2.4M</p>
+            </div>
+            <div class="stat-card__description">
+              <h2 class="stat-card__title">Students reached</h2>
+              <p class="stat-card__detail">Across 31 countries since 2011.</p>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__header">
+              <img
+                class="stat-card__icon"
+                src="/icons/stat-schools.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <p class="stat-card__value">1,284</p>
+            </div>
+            <div class="stat-card__description">
+              <h2 class="stat-card__title">Schools partnered</h2>
+              <p class="stat-card__detail">In 14 countries, from Kenya to Guatemala.</p>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__header">
+              <img
+                class="stat-card__icon"
+                src="/icons/stat-teachers.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <p class="stat-card__value">38K</p>
+            </div>
+            <div class="stat-card__description">
+              <h2 class="stat-card__title">Teachers trained</h2>
+              <p class="stat-card__detail">Equipped with modern tools and methodology.</p>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-card__header">
+              <img
+                class="stat-card__icon"
+                src="/icons/stat-graduation.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <p class="stat-card__value">3.1×</p>
+            </div>
+            <div class="stat-card__description">
+              <h2 class="stat-card__title">Graduation lift</h2>
+              <p class="stat-card__detail">Partner schools outperform national averages 3x.</p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p class="site-footer__text">© 2026 Bridge Collective</p>
+        <p class="site-footer__text site-footer__text--end">Registered charity 12345678</p>
+      </footer>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>

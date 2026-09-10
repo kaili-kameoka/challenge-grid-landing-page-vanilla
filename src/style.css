@@ -16,3 +16,15 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+/* Temporary harness for previewing the stats component on its own. The real
+   Statistics Container from the design replaces this. */
+.stats-preview {
+  display: grid;
+}
+
+@media (min-width: 48rem) {
+  .stats-preview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

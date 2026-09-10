@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      document.documentElement.classList.add('js')
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +16,47 @@
   </head>
   <body>
     <div id="app">
+    <header class="navbar">
+      <div class="navbar__bar">
+        <a class="navbar__brand" href="/">
+          <span class="navbar__brand-mark" aria-hidden="true">●</span> Bridge Collective
+        </a>
+        <button
+          class="navbar__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navbar-menu"
+        >
+          <span class="navbar__toggle-text">Menu</span>
+          <img
+            class="navbar__toggle-icon navbar__toggle-icon--menu"
+            src="/icons/nav-menu.svg"
+            alt=""
+            width="24"
+            height="24"
+          />
+          <img
+            class="navbar__toggle-icon navbar__toggle-icon--close"
+            src="/icons/nav-close.svg"
+            alt=""
+            width="24"
+            height="24"
+          />
+        </button>
+      </div>
+      <nav class="navbar__panel" id="navbar-menu" aria-label="Main">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a class="navbar__link" href="#about">About</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="#our-work">Our Work</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="#partners">Partners</a></li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#annual-report">Annual Report</a>
+          </li>
+          <li class="navbar__item"><a class="navbar__link" href="#donate">Donate</a></li>
+        </ul>
+      </nav>
+    </header>
+
       <!-- Temporary harness for previewing the stats component on its own.
            The real Statistics Container from the design replaces this. -->
       <div class="stats-preview">

@@ -21,6 +21,7 @@
   /* Only the steps the built components use so far. */
   --spacing-300: 1.5rem; /* 24px */
   --spacing-400: 2rem; /* 32px */
+  --spacing-600: 3rem; /* 48px */
 
   /* --- Typography: family and weight -------------------------------------- */
   --font-family-base:

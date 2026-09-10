@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Navbar
+   Source: Figma "grid-landing-page" > 🎨 Design System > Navbar (6152:443)
+           and Menu (6163:902)
+   ========================================================================== */
+
+.navbar {
+  font-family: var(--font-family-base);
+  color: var(--color-neutral-0);
+}
+
+/* --- Bar: 72px tall at every breakpoint --------------------------------- */
+
+.navbar__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-300);
+  /* 72px total with the border inside it, so page content starts at exactly
+     72px as it does in the design. Centring a 24px row in that box is what
+     the design's 24px block padding amounts to. */
+  height: 4.5rem;
+  padding-inline: var(--spacing-300);
+  border-block-end: 1px solid var(--color-blue-400);
+  background-color: var(--color-blue-700);
+}
+
+/* Tablet and up widen the inset to 48px; the block padding stays 24px. */
+@media (min-width: 48rem) {
+  .navbar__bar {
+    padding-inline: var(--spacing-600);
+  }
+}
+
+.navbar__brand {
+  color: inherit;
+  font-size: var(--text-preset-6-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--text-preset-6-line-height);
+  letter-spacing: var(--text-preset-6-medium-letter-spacing);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* --- Toggle: only useful with JS, so it is revealed by the `js` class ---- */
+
+.navbar__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.js .navbar__toggle {
+  display: flex;
+}
+
+.navbar__toggle:focus-visible {
+  outline: 2px solid var(--color-neutral-0);
+  outline-offset: 4px;
+}
+
+.navbar__toggle-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navbar__toggle[aria-expanded='false'] .navbar__toggle-icon--close,
+.navbar__toggle[aria-expanded='true'] .navbar__toggle-icon--menu {
+  display: none;
+}
+
+/* Keeps the button's accessible name without showing it, matching a design
+   that carries only the icon. */
+.navbar__toggle-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* --- Panel -------------------------------------------------------------- */
+
+.navbar__panel {
+  padding: var(--spacing-400);
+  background-color: var(--color-blue-700);
+}
+
+/* Without JS the panel simply stays open, so the links are always reachable. */
+.js .navbar__panel {
+  display: none;
+}
+
+.js .navbar__panel--open {
+  display: block;
+}
+
+/* Tablet and up dock the panel to the right edge at a fixed 396px. */
+@media (min-width: 48rem) {
+  .navbar__panel {
+    width: 24.75rem; /* 396px */
+    margin-inline-start: auto;
+    padding: var(--spacing-600);
+  }
+}
+
+.navbar__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .navbar__list {
+    text-align: right;
+  }
+}
+
+.navbar__link {
+  display: block;
+  color: var(--color-neutral-0);
+  font-size: var(--text-preset-4-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--text-preset-4-line-height);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+  text-decoration: none;
+}
+
+.navbar__link:hover,
+.navbar__link:focus-visible,
+.navbar__link--active {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: from-font;
+  text-underline-position: from-font;
+}

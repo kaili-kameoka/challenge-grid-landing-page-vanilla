@@ -60,7 +60,7 @@ Users should be able to:
 
 ## Author
 
-- Website -
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [kaili.me](https://kaili.me)
+- Frontend Mentor - [@kaili-kameoka](https://www.frontendmentor.io/profile/kaili-kameoka)
 
 ## Acknowledgments

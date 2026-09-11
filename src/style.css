@@ -12,6 +12,13 @@
   box-sizing: border-box;
 }
 
+/* Reserve the scrollbar gutter permanently. Locking the body while the menu
+   is open otherwise removes the scrollbar and the whole page jumps 15px
+   wider on open and back on close. */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   background-color: var(--color-blue-700);

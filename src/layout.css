@@ -9,6 +9,16 @@
   min-height: 100svh;
 }
 
+/* The header spans the viewport; everything below it is held to the design's
+   1440px container. The menu panel stays pinned to the viewport's right edge,
+   which is where the full-width header puts the toggle. */
+.page__main,
+.page__footer {
+  width: 100%;
+  max-width: 90rem; /* 1440px */
+  margin-inline: auto;
+}
+
 /* Mobile and tablet stack the hero above the stats. The hero row takes any
    slack left over once the stats and the 72px bars are placed, which is how
    the design derives its 536px tablet hero rather than sizing it to content. */

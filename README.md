@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: [github.com/kaili-kameoka/challenge-grid-landing-page-vanilla](https://github.com/kaili-kameoka/challenge-grid-landing-page-vanilla)
+- Live Site URL: [kaili-kameoka.github.io/challenge-grid-landing-page-vanilla](https://kaili-kameoka.github.io/challenge-grid-landing-page-vanilla/)
 
 ## My process
 
